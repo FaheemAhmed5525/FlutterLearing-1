@@ -1,5 +1,6 @@
+import 'package:flutter/material.dart';
 
-import 'pakage:flutter/material.dart';
+import 'package:first_app/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
@@ -18,12 +19,8 @@ class GradientContainer extends StatelessWidget {
         begin: Alignment.topRight,
         end: Alignment.bottomLeft,
       )),
-      child: const Center(
-        child: Text("Hello and Welcome! to Flutter App Development",
-            style: TextStyle(
-              color: Color.fromARGB(255, 55, 5, 205),
-              fontSize: 32,
-            )),
+      child: Center(
+        child: StyledText("Hello and Welcome! to Flutter App Development"),
       ),
     );
   }
