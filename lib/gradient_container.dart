@@ -3,19 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:first_app/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key, required this.colors});
   
-  
+final Color color1;
+final Color color2;
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           gradient: LinearGradient(
-        colors: [
-          Color.fromRGBO(239, 142, 93, 1),
-          Color.fromARGB(255, 246, 97, 97),
-          Color.fromRGBO(240, 50, 50, 1)
-        ],
+        colors: [color1, color2],
         begin: Alignment.topRight,
         end: Alignment.bottomLeft,
       )),
@@ -25,3 +22,27 @@ class GradientContainer extends StatelessWidget {
     );
   }
 }
+
+
+
+
+// class GradientContainer extends StatelessWidget {
+//   const GradientContainer({super.key, required this.colors});
+  
+//   final List<Color> colors;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       decoration: BoxDecoration(
+//           gradient: LinearGradient(
+//         colors: colors,
+//         begin: Alignment.topRight,
+//         end: Alignment.bottomLeft,
+//       )),
+//       child: Center(
+//         child: StyledText("Hello and Welcome! to Flutter App Development"),
+//       ),
+//     );
+//   }
+// }
